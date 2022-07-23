@@ -1,0 +1,7 @@
+{% for item in site.data.navigation %}
+<li>
+    <a href="{{ item.link }}" {% if page.layout == item.layout or page.alias == item.link %} class="active"{% endif %}>
+        {{ item.name }} 
+    </a>
+</li>
+{% endfor %}

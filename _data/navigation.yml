@@ -1,0 +1,15 @@
+- name: Home
+  link: /
+  layout: home
+- name: About
+  link: /about
+  layout: about
+- name: Blog
+  link: /blog
+  layout: post
+- name: Team
+  link: /team
+  layout: team
+- name: Contact
+  link: /contact
+  layout: contact
