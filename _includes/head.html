@@ -1,52 +1,24 @@
 <head>
-  {% if site.analytics.google %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "{{ site.analytics.google }}");
-  </script>
-  <!-- End Google Analytics -->
-  {% endif %}
-
+  <!-- meta data & title -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ site.description }}">
-  <meta name="author" content="{{ site.author }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="author" content="">
 
-  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
-  <!-- Bootstrap core CSS -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Custom fonts for this template -->
-  <link href="assets/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-  <!-- Custom styles for this theme -->
-  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
-  <link href="assets/css/agency.css" rel="stylesheet" />
-
-  <!-- Page container change top padding when nav shrinks -->
-  {% if page.layout == "page" %}
-  <style>
-    #pagecontainer {
-      padding-top: 150px;
-    }
-    @media only screen and (max-width: 991px) {
-      #pagecontainer {
-        padding-top: 100px;
-      }
-    }
-  </style>
-  {% endif %}
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
